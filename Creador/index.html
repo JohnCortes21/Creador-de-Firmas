@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Firmas Digitales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Creador de Firmas Digitales</h1>
+        <form id="signatureForm">
+            <label for="signatureText">NOMBRES:</label>
+            <input type="text" id="signatureText" name="signatureText" required>
+
+            <label for="signatureRole">CARGO:</label>
+            <input type="text" id="signatureRole" name="signatureRole" required>
+            
+            <label for="signatureImage">SUBIR LOGO EMPRESA:</label>
+            <input type="file" id="signatureImage" name="signatureImage" accept="image/*" required>
+            
+            <button type="submit">CREAR FIRMA DIGITAL</button>
+        </form>
+        
+        <div id="signaturePreview">
+            <h2>VISTA PREVIA DE LA FIRMA DIGITAL:</h2>
+            <div id="signatureOutput"></div>
+            <button id="downloadBtn" style="display:none;">DESCARGAR FIRMA</button>
+        </div>
+    </div>
+    
+    <!-- Incluir html2canvas y script.js al final del body -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="SHA-512-<nuevo-valor-de-integridad>" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="script.js"></script>
+</body>
+</html>
